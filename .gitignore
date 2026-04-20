@@ -1,0 +1,66 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+venv/
+env/
+ENV/
+
+# PyCharm / IDE
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Distribution / packaging
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+pytest_cache/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.*
+
+# Database
+*.sqlite3
+*.db
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Playwright (if using)
+playwright-report/
+test-results/
+
+# Allure reports
+allure-results/
+allure-report/
+
+# Temporary files
+*.swp
+*.tmp
+
+
