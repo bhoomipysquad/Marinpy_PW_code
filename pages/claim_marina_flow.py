@@ -15,7 +15,6 @@ class Claim_Marina(BasePage):
         expect(marina).to_be_visible(timeout=10000)
         marina_name = marina.locator("div[style*='font-size: 14px'][style*='font-weight: 600']").inner_text().strip()
         print("Found Marina Name : " , marina_name)
-        # print("Found Marina Name:", marina.inner_text().strip())
         with self.page.expect_popup() as new_page_info:
          marina.click()
          new_page = new_page_info.value
@@ -39,7 +38,7 @@ class Claim_Marina(BasePage):
              new_page.get_by_placeholder("Enter phone").fill("1234567899")
              new_page.get_by_placeholder("Describe your job role").fill("QA")
              new_page.get_by_placeholder("Additional comments").fill("NO COMMENT")
-             new_page.locator("input[type='file']").set_input_files("/home/pys/PycharmProjects/Marinpy_PW_code/claiming_document.png")
+             new_page.locator("input[type='file']").set_input_files("/home/pys/PycharmProjects/Marinpy_PW_code/Screenshot from 2026-05-22 17-04-23.png")
              new_page.get_by_role("button",name="Submit" ,exact=True).click()
              new_page.get_by_role("button",name="OK" ,exact=True).click()
              expect (new_page.get_by_role("button",name="Withdraw my claim" ,exact=True)).to_be_visible()

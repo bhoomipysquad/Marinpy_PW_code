@@ -33,7 +33,7 @@ def boater_acc_signup(common_flow):
         expect(page).to_have_url("https://dev-marinapy.pysquad.com/signup")
         expect(page.get_by_role("heading" , name = "Create Account!")).to_be_visible()
         page.get_by_role("textbox", name="First Name").fill("Bhoomi")
-        page.get_by_role("textbox" , name="Last Name").fill("Testing")
+        page.get_by_role("textbox" , name="Last Name").fill("Automation test")
         page.get_by_role("textbox" , name="Email").fill(f"bhoomi+abcclaim{random.randint(10, 500)}@pysquad.com")
         page.get_by_role("textbox" , name="Password").fill("bhumiB2111@")
         page.get_by_role("button" , name="Create account").click()

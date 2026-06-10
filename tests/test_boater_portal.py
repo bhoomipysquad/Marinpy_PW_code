@@ -20,20 +20,20 @@ def test_claim_marina_flow_to_booking_flow(boater_acc_signup, super_admin_acc_lo
     claim = Claim_Marina(boater_page)
     claim.claim_marina_flow()
     admin_page = super_admin_acc_login
-    # claim_approved = Super_Admin_claim_Approved(admin_page)
-    # claim_approved.cl()
+    claim_approved = Super_Admin_Marina_Claims(admin_page)
+    claim_approved.claim_approved_super_admin()
 
 def test_claim_marina_flow(boater_acc_signup):
     page = boater_acc_signup
     claim = Claim_Marina(page)
     claim.claim_marina_flow()
 
-def test_super_admin_approved_claim(super_admin_acc_login):
+def test_claim_approved_super_admin(super_admin_acc_login):
     page = super_admin_acc_login
     claim_approved = Super_Admin_Marina_Claims(page)
     claim_approved.claim_approved_super_admin()
 
-def test_super_admin_rejected_claim(super_admin_acc_login):
+def test_claim_rejected_super_admin(super_admin_acc_login):
     page = super_admin_acc_login
     claim_reject = Super_Admin_Marina_Claims(page)
     claim_reject.claim_rejected_super_admin()

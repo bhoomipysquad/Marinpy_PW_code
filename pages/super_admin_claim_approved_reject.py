@@ -29,13 +29,11 @@ class Super_Admin_Marina_Claims(BasePage):
             print(f"{field}: {value}")
 
     def claim_approved_super_admin(self):
-        self.open_claiming_option()
         self.select_marina()
         self.page.get_by_role("button", name="Approve Claim").click()
         print("Claim Approved Successfully")
 
     def claim_rejected_super_admin(self):
-        self.open_claiming_option()
         self.select_marina()
         self.page.get_by_role("button", name="Reject Claim").click()
         self.page.get_by_placeholder("Write a reason...").fill("rejected your claim")
@@ -43,7 +41,6 @@ class Super_Admin_Marina_Claims(BasePage):
         print("Claim Rejected Successfully")
 
     def claim_needs_clarification(self):
-        self.open_claiming_option()
         self.select_marina()
         self.page.get_by_role("button", name="Request clarification").click()
         expect(self.page.get_by_text("Claim Request Clarification Pending")).to_be_visible()
@@ -53,7 +50,7 @@ class Super_Admin_Marina_Claims(BasePage):
         self.open_claiming_option()
         self.page.locator("#rc-tabs-0-tab-active").click()
         expect(self.page.get_by_role("columnheader", name="SWITCH")).to_be_visible(timeout=10000)
-        marina_name = "Kirstula Marina"
+        marina_name = ""
         row = self.page.locator("tr").filter(has=self.page.locator(f"a:text-is('{marina_name}')"))
         expect(row).to_be_visible(timeout=10000)
         row.get_by_role("switch").click()
